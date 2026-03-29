@@ -515,7 +515,146 @@ void Engine::Init() {
 </div>
 </div>
 </section>
-<!-- 6. Join the Dev_Log (Email Signup) -->
+<!-- 6. About Me -->
+<section class="py-16 md:py-24 px-4 md:px-8 bg-surface-container-low relative overflow-hidden" id="about">
+<div class="max-w-7xl mx-auto">
+<!-- Section Header -->
+<div class="mb-16">
+<h2 class="font-headline text-4xl sm:text-6xl font-black uppercase tracking-tighter">About_Me</h2>
+<p class="text-on-surface-variant font-headline uppercase tracking-widest text-xs mt-2">The person behind the code</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+<!-- Left: Identity Card -->
+<div class="lg:col-span-5 space-y-8">
+<!-- Avatar placeholder - abstract/geometric instead of photo -->
+<div class="relative">
+<div class="w-full aspect-square max-w-[320px] bg-surface relative overflow-hidden border-2 border-primary/30 rounded-lg">
+<div class="absolute inset-0 bg-gradient-to-br from-primary/20 via-surface to-tertiary/20"></div>
+<div class="absolute inset-0 opacity-[0.07]" style="background-image: linear-gradient(to right, #484847 1px, transparent 1px), linear-gradient(to bottom, #484847 1px, transparent 1px); background-size: 20px 20px;"></div>
+<!-- Stylized monogram -->
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="text-center">
+<div class="font-headline text-[8rem] font-black text-primary/20 leading-none select-none">C</div>
+<div class="font-headline text-sm tracking-[0.5em] uppercase text-on-surface-variant mt-2">CHARLES_DEV</div>
+</div>
+</div>
+<div class="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-primary via-secondary to-tertiary"></div>
+</div>
+</div>
+<!-- Quick Stats Card -->
+<div class="bg-surface p-6 border-l-4 border-tertiary">
+<div class="grid grid-cols-2 gap-4">
+<div>
+<div class="text-[10px] font-headline uppercase tracking-widest text-on-surface-variant mb-1">Name</div>
+<div class="font-headline font-bold uppercase text-on-surface">Charles</div>
+</div>
+<div>
+<div class="text-[10px] font-headline uppercase tracking-widest text-on-surface-variant mb-1">Age</div>
+<div class="font-headline font-bold uppercase text-on-surface">15</div>
+</div>
+<div>
+<div class="text-[10px] font-headline uppercase tracking-widest text-on-surface-variant mb-1">Location</div>
+<div class="font-headline font-bold uppercase text-primary">California</div>
+</div>
+<div>
+<div class="text-[10px] font-headline uppercase tracking-widest text-on-surface-variant mb-1">Status</div>
+<div class="font-headline font-bold uppercase text-secondary flex items-center gap-2">
+<span class="w-2 h-2 bg-secondary rounded-full animate-pulse"></span>Online
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right: Bio & Interests -->
+<div class="lg:col-span-7 space-y-10">
+<!-- Bio -->
+<div class="space-y-6">
+<p class="text-lg text-on-surface leading-relaxed">
+I'm <span class="text-primary font-bold">Charles</span> — a 15-year-old developer, athlete, and explorer based in <span class="text-primary font-bold">California</span>. I got into programming through <span class="text-tertiary font-bold">vibe coding</span> with AI — and I've been hooked ever since. I built this entire homepage and my game <span class="text-[#f4b41a] font-bold">MOUSE</span> by collaborating with AI tools, turning ideas into real, deployed projects.
+</p>
+<p class="text-on-surface-variant leading-relaxed">
+When I'm not shipping code, you'll find me in the pool playing water polo, pushing limits at the gym, volunteering in my community, or hanging out with friends from school. I believe the discipline from sports and giving back translates directly into how I build software — move fast, stay sharp, and always ship.
+</p>
+</div>
+<!-- Interests Grid -->
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+<!-- Vibe Coding -->
+<div class="bg-surface p-5 border-t-2 border-[#f4b41a] group hover:border-[#f4b41a] transition-all">
+<span class="material-symbols-outlined text-[#f4b41a] text-3xl mb-3">smart_toy</span>
+<h4 class="font-headline text-sm font-black uppercase tracking-widest mb-2">Vibe Coding</h4>
+<p class="text-xs text-on-surface-variant leading-relaxed">Building real projects by collaborating with AI. Ideas to deployment, fast.</p>
+</div>
+<!-- Water Polo -->
+<div class="bg-surface p-5 border-t-2 border-primary group hover:border-primary transition-all">
+<span class="material-symbols-outlined text-primary text-3xl mb-3">pool</span>
+<h4 class="font-headline text-sm font-black uppercase tracking-widest mb-2">Water Polo</h4>
+<p class="text-xs text-on-surface-variant leading-relaxed">Competitive player. Strategy meets stamina in the pool.</p>
+</div>
+<!-- Fitness -->
+<div class="bg-surface p-5 border-t-2 border-secondary group hover:border-secondary transition-all">
+<span class="material-symbols-outlined text-secondary text-3xl mb-3">fitness_center</span>
+<h4 class="font-headline text-sm font-black uppercase tracking-widest mb-2">Fitness</h4>
+<p class="text-xs text-on-surface-variant leading-relaxed">Gym sessions keep the body and mind sharp. Discipline drives everything.</p>
+</div>
+<!-- Volunteering -->
+<div class="bg-surface p-5 border-t-2 border-secondary group hover:border-secondary transition-all">
+<span class="material-symbols-outlined text-secondary text-3xl mb-3">volunteer_activism</span>
+<h4 class="font-headline text-sm font-black uppercase tracking-widest mb-2">Volunteering</h4>
+<p class="text-xs text-on-surface-variant leading-relaxed">Giving back to the community. Building things that matter beyond the screen.</p>
+</div>
+<!-- Friends -->
+<div class="bg-surface p-5 border-t-2 border-primary group hover:border-primary transition-all">
+<span class="material-symbols-outlined text-primary text-3xl mb-3">group</span>
+<h4 class="font-headline text-sm font-black uppercase tracking-widest mb-2">Friends</h4>
+<p class="text-xs text-on-surface-variant leading-relaxed">Hanging out with the crew from school. Best ideas come from good company.</p>
+</div>
+<!-- Travel -->
+<div class="bg-surface p-5 border-t-2 border-tertiary group hover:border-tertiary transition-all">
+<span class="material-symbols-outlined text-tertiary text-3xl mb-3">flight</span>
+<h4 class="font-headline text-sm font-black uppercase tracking-widest mb-2">Travel</h4>
+<p class="text-xs text-on-surface-variant leading-relaxed">California to Asia and beyond. New places fuel new ideas.</p>
+</div>
+</div>
+<!-- Travel Map / Countries -->
+<div class="bg-surface p-6 border-l-4 border-primary">
+<h4 class="font-headline text-sm font-black uppercase tracking-[0.2em] text-on-surface mb-5">Passport_Log</h4>
+<div class="flex flex-wrap gap-3">
+<div class="inline-flex items-center gap-2 bg-surface-container-highest px-4 py-2 rounded-full border border-outline-variant/20 group hover:border-primary/50 transition-all">
+<span class="text-sm">🇺🇸</span>
+<span class="font-headline text-xs uppercase tracking-widest text-on-surface font-bold">USA</span>
+<span class="text-[9px] uppercase tracking-widest text-primary font-headline">Home</span>
+</div>
+<div class="inline-flex items-center gap-2 bg-surface-container-highest px-4 py-2 rounded-full border border-outline-variant/20 group hover:border-primary/50 transition-all">
+<span class="text-sm">🇨🇳</span>
+<span class="font-headline text-xs uppercase tracking-widest text-on-surface font-bold">China</span>
+</div>
+<div class="inline-flex items-center gap-2 bg-surface-container-highest px-4 py-2 rounded-full border border-outline-variant/20 group hover:border-primary/50 transition-all">
+<span class="text-sm">🇸🇬</span>
+<span class="font-headline text-xs uppercase tracking-widest text-on-surface font-bold">Singapore</span>
+</div>
+<div class="inline-flex items-center gap-2 bg-surface-container-highest px-4 py-2 rounded-full border border-outline-variant/20 group hover:border-primary/50 transition-all">
+<span class="text-sm">🇲🇾</span>
+<span class="font-headline text-xs uppercase tracking-widest text-on-surface font-bold">Malaysia</span>
+</div>
+<div class="inline-flex items-center gap-2 bg-surface-container-highest px-4 py-2 rounded-full border border-outline-variant/20 group hover:border-tertiary/50 transition-all">
+<span class="material-symbols-outlined text-tertiary text-sm">more_horiz</span>
+<span class="font-headline text-xs uppercase tracking-widest text-on-surface-variant font-bold">& More</span>
+</div>
+</div>
+</div>
+<!-- Philosophy Quote -->
+<div class="relative bg-surface-container-highest p-8 overflow-hidden">
+<div class="absolute top-4 left-4 text-6xl text-primary/10 font-headline font-black leading-none select-none">"</div>
+<p class="font-headline text-lg italic text-on-surface leading-relaxed relative z-10 pl-8">
+Build worlds, break limits, explore everything.
+</p>
+<p class="font-headline text-xs uppercase tracking-[0.3em] text-tertiary mt-4 pl-8">— Charles_Dev</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 7. Join the Dev_Log (Email Signup) -->
 <section class="py-16 md:py-24 px-4 md:px-8 border-t border-outline-variant/20">
 <div class="max-w-4xl mx-auto text-center space-y-12">
 <div>
