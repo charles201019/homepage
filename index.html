@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CHARLES_DEV // KINETIC_DEV</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Be+Vietnam+Pro:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-tertiary": "#47001d",
+              "secondary-fixed": "#2ff801",
+              "surface-container-highest": "#262626",
+              "surface-container": "#1a1a1a",
+              "inverse-surface": "#fcf9f8",
+              "surface-tint": "#8ff5ff",
+              "surface-variant": "#262626",
+              "primary-fixed": "#00eefc",
+              "secondary": "#2ff801",
+              "tertiary-fixed-dim": "#ff769e",
+              "primary-container": "#00eefc",
+              "on-surface-variant": "#adaaaa",
+              "on-primary-fixed-variant": "#005e64",
+              "surface-container-low": "#131313",
+              "tertiary": "#ff6b98",
+              "on-secondary": "#0b5800",
+              "secondary-dim": "#2be800",
+              "tertiary-dim": "#e4006c",
+              "secondary-fixed-dim": "#2be800",
+              "on-tertiary-fixed-variant": "#760035",
+              "outline": "#767575",
+              "error": "#ff716c",
+              "surface": "#0e0e0e",
+              "inverse-primary": "#006a71",
+              "surface-dim": "#0e0e0e",
+              "on-secondary-fixed": "#064200",
+              "primary-dim": "#00deec",
+              "on-primary-fixed": "#003f43",
+              "surface-bright": "#2c2c2c",
+              "on-background": "#ffffff",
+              "tertiary-fixed": "#ff8eac",
+              "on-error": "#490006",
+              "on-tertiary-container": "#000000",
+              "primary": "#8ff5ff",
+              "tertiary-container": "#fc0078",
+              "inverse-on-surface": "#565555",
+              "surface-container-lowest": "#000000",
+              "surface-container-high": "#20201f",
+              "on-surface": "#ffffff",
+              "on-tertiary-fixed": "#380015",
+              "error-dim": "#d7383b",
+              "background": "#0e0e0e",
+              "on-secondary-container": "#e7ffd9",
+              "on-error-container": "#ffa8a3",
+              "on-primary-container": "#005359",
+              "error-container": "#9f0519",
+              "on-primary": "#005d63",
+              "on-secondary-fixed-variant": "#0d6200",
+              "outline-variant": "#484847",
+              "secondary-container": "#106e00",
+              "primary-fixed-dim": "#00deec"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Be Vietnam Pro"],
+              "label": ["Space Grotesk"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bg-grid {
+            background-image: linear-gradient(to right, #484847 1px, transparent 1px), linear-gradient(to bottom, #484847 1px, transparent 1px);
+            background-size: 40px 40px;
+            opacity: 0.05;
+        }
+        .glitch-border {
+            box-shadow: -2px 0 0 #8ff5ff, 2px 0 0 #ff6b98;
+        }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary selection:text-on-primary">
+<!-- Top Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-[#0e0e0e]/60 backdrop-blur-xl border-b border-[#484847]/20 flex justify-between items-center px-4 md:px-8 py-4 max-w-none w-full shadow-[0_0_24px_rgba(143,245,255,0.04)]">
+<div class="text-2xl font-black tracking-tighter text-[#8ff5ff] italic uppercase font-headline">CHARLES_DEV</div>
+<div class="hidden md:flex items-center gap-8 font-headline uppercase tracking-widest text-sm">
+<a class="text-[#8ff5ff] border-b-2 border-[#8ff5ff] pb-1" href="#home">Home</a>
+<a class="text-gray-400 hover:text-[#8ff5ff] transition-colors" href="#games">Games</a>
+<a class="text-gray-400 hover:text-[#8ff5ff] transition-colors" href="#media">Media</a>
+<a class="text-gray-400 hover:text-[#8ff5ff] transition-colors" href="#projects">Projects</a>
+<a class="text-gray-400 hover:text-[#8ff5ff] transition-colors" href="#about">About</a>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-[#8ff5ff] hidden md:inline">terminal</span>
+<button class="bg-primary text-on-primary px-4 md:px-6 py-2 font-headline uppercase tracking-widest text-xs md:text-sm font-bold hover:bg-primary-container hover:scale-105 transition-all duration-200 active:scale-95">
+                Hire Me
+            </button>
+<button class="md:hidden text-[#8ff5ff]" onclick="document.getElementById('mobile-nav').classList.toggle('hidden')">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<div id="mobile-nav" class="hidden md:hidden fixed top-16 left-0 w-full z-40 bg-[#0e0e0e]/95 backdrop-blur-xl border-b border-[#484847]/20 px-4 py-6 flex flex-col gap-4 font-headline uppercase tracking-widest text-sm">
+<a class="text-[#8ff5ff] py-2" href="#home" onclick="document.getElementById('mobile-nav').classList.add('hidden')">Home</a>
+<a class="text-gray-400 py-2" href="#games" onclick="document.getElementById('mobile-nav').classList.add('hidden')">Games</a>
+<a class="text-gray-400 py-2" href="#media" onclick="document.getElementById('mobile-nav').classList.add('hidden')">Media</a>
+<a class="text-gray-400 py-2" href="#projects" onclick="document.getElementById('mobile-nav').classList.add('hidden')">Projects</a>
+<a class="text-gray-400 py-2" href="#about" onclick="document.getElementById('mobile-nav').classList.add('hidden')">About</a>
+</div>
+<main class="relative overflow-hidden">
+<div class="bg-grid absolute inset-0 pointer-events-none"></div>
+<!-- 1. Hero Section -->
+<section class="min-h-screen flex flex-col justify-center px-4 md:px-8 pt-24 relative" id="home">
+<div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-7 space-y-8">
+<div class="inline-flex items-center gap-3 bg-secondary-container px-4 py-1.5 rounded-full border border-secondary/20">
+<span class="w-2.5 h-2.5 bg-secondary rounded-full animate-pulse"></span>
+<span class="font-headline text-xs tracking-widest uppercase font-bold text-on-secondary-container">Available for Commissions</span>
+</div>
+<h1 class="font-headline text-4xl sm:text-6xl md:text-8xl font-black tracking-tighter uppercase leading-[0.9] text-on-background">
+                        CHARLES_DEV: <br/>
+<span class="text-primary italic">GAMES, BOOKS,</span> <br/>
+                        &amp; PROJECTS
+                    </h1>
+<p class="max-w-xl text-lg text-on-surface-variant leading-relaxed">
+                        A 15-year-old architect of digital realms. Building high-performance game engines and immersive experiences through the lens of <span class="text-tertiary">Neo-Brutalism</span> and functional code.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-8 py-4 font-headline font-bold uppercase tracking-[0.2em] shadow-[8px_8px_0px_#000000] hover:translate-x-1 hover:translate-y-1 hover:shadow-none transition-all">
+                            View Portfolio
+                        </button>
+<button class="bg-surface-container-highest border border-primary/20 text-primary px-8 py-4 font-headline font-bold uppercase tracking-[0.2em] hover:bg-surface-container-high transition-all">
+                            Read Dev_Log
+                        </button>
+</div>
+</div>
+<div class="lg:col-span-5 relative group">
+<div class="absolute -inset-4 bg-primary/10 blur-3xl rounded-full group-hover:bg-tertiary/10 transition-colors duration-700"></div>
+<div class="relative aspect-square bg-surface-container-low p-4 rounded-xl border border-outline-variant/20 overflow-hidden transform rotate-2 group-hover:rotate-0 transition-transform duration-500">
+<img class="w-full h-full object-cover grayscale brightness-75 group-hover:grayscale-0 transition-all duration-700" data-alt="abstract tech visualization with neon cyan flowing lines and data patterns on a dark charcoal background cinematic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDeBYiqYsKFeyVB79POliq_N5qTivhtJmPspIasowV_ApIOJxVO4YIzk1B6zoWxEGPM66xA7Ydjzb8euV09YxOEHbRAndRrB1nEGRwyAfhtRqMyBl_t24-pTrL0DoCq5NqG7WPsETw47PPmIHcY5yfj3-X4dH0QVKN2IgNBItB85APdBaAo-NZ5d2v_mfbWsEXWiReJKNtX1TwBlJPAglpdbmil78sB0W7_BaBDC9ndngK8DqSGmHDgwhnYX6iIDfviOihoSrsrL3c"/>
+<div class="absolute bottom-8 right-8 bg-surface-container-highest p-4 border-l-4 border-primary">
+<p class="font-headline text-xs tracking-widest uppercase opacity-60 mb-1">Latest Commit</p>
+<p class="font-headline text-sm font-bold text-secondary">NEON_SHIFT v0.4.2</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- 2. Featured Release: MOUSE -->
+<section class="py-16 md:py-24 px-4 md:px-8 bg-surface-container-low">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row gap-8 md:gap-12 items-center">
+<div class="w-full md:w-1/2 relative">
+<div class="absolute -top-10 -left-10 text-[10rem] font-black text-white/5 font-headline pointer-events-none uppercase">MOUSE</div>
+<div class="relative rounded-lg overflow-hidden border-2 border-primary/30 group">
+<img class="w-full aspect-video object-cover" data-alt="dark high contrast top-down game screenshot of a mechanical mouse navigating a neon glowing laboratory maze cinematic shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXOMoQ-0GRm3pqgBXhGj7_6sVG6oKGCF8X4zpOfLBlprNQ-OaxyxhhiiYx4ck4Wf-PD3rfxEeyfnuukRFT5d2o9I-4VruDubT1B_7JoQdBr5iGezsY3gTxxZzQETdzQZ6MAY6uKur1ib2_9PMvHOOq0rt8qbD06Z-7Qh-GPe3UCH2xwNGAXEHBxt_SawIlFPwlQF-hxK4jAc-91US_TuuFUJ8VIq_QlCp_RJdtRLdB9nWyXM8BzE3vStINcLWkgNFe9S9wIrLMtp4"/>
+<div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent opacity-60"></div>
+</div>
+</div>
+<div class="w-full md:w-1/2 space-y-6">
+<div class="font-headline text-tertiary uppercase tracking-[0.3em] text-sm font-bold">Featured Release</div>
+<h2 class="font-headline text-3xl sm:text-5xl font-black uppercase tracking-tighter">MOUSE_</h2>
+<p class="text-on-surface-variant text-lg">
+                            A high-stakes tactical survival game where you play as an enhanced laboratory mouse escaping a collapsing research facility. Features physics-based platforming and advanced AI sentries.
+                        </p>
+<div class="flex items-center gap-6 py-4">
+<div class="text-center">
+<div class="text-2xl font-headline font-bold text-primary">4.9/5</div>
+<div class="text-[10px] uppercase tracking-widest opacity-50">Rating</div>
+</div>
+<div class="w-px h-10 bg-outline-variant/30"></div>
+<div class="text-center">
+<div class="text-2xl font-headline font-bold text-primary">12K+</div>
+<div class="text-[10px] uppercase tracking-widest opacity-50">Players</div>
+</div>
+</div>
+<button class="w-full md:w-auto bg-secondary text-on-secondary px-10 py-5 font-headline font-black uppercase tracking-widest text-lg flex items-center justify-center gap-3 hover:bg-secondary-dim transition-colors">
+                            PLAY NOW <span class="material-symbols-outlined">play_arrow</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- 3. Games Library -->
+<section class="py-16 md:py-24 px-4 md:px-8" id="games">
+<div class="max-w-7xl mx-auto mb-16 flex flex-col md:flex-row justify-between items-end gap-6">
+<div>
+<h2 class="font-headline text-4xl font-black uppercase tracking-tight mb-2">Project_Archive</h2>
+<p class="text-on-surface-variant font-headline uppercase tracking-widest text-xs">A comprehensive history of playable builds</p>
+</div>
+<div class="flex gap-4">
+<button class="p-3 border border-outline-variant hover:border-primary transition-colors">
+<span class="material-symbols-outlined">arrow_back</span>
+</button>
+<button class="p-3 border border-outline-variant hover:border-primary transition-colors">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="flex overflow-x-auto gap-8 pb-12 no-scrollbar px-4">
+<!-- Void Walker -->
+<div class="min-w-[280px] sm:min-w-[320px] bg-surface-container-low border border-outline-variant/10 group hover:border-primary/50 transition-all duration-300">
+<div class="relative h-48 overflow-hidden">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 scale-110 group-hover:scale-100" data-alt="sci-fi cosmic horror game art with deep purples and blues a lonely figure walking on a floating platform" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3oy0Fh8xnO03n8umzyeDO5kE3Ik3MUkfFbBey52_5VVuQ-ZjsPgOaWY3nauT_EEbenzlHUzLPT9ua3sqZaqx0jTgywtLvrVc6i9YIfcKj92ZQjGblN5-Qy3wkQA35KqaePQFJ2QjRaGWZFPmYBtg0lyH-TEJlTFfbvr1Mg0_PwkJ75kigdzQp9yuStJ9IOm8qoxfwW94w-sisp-EML9lR3WOWPRUPN7B3NBGieBqNL71Q_w023M2MFQI42E32Wmm3LiSN_jTFZOM"/>
+<div class="absolute top-4 left-4 bg-primary text-on-primary px-3 py-1 font-headline text-[10px] font-bold uppercase">RPG</div>
+</div>
+<div class="p-6">
+<h3 class="font-headline text-xl font-bold uppercase mb-2">Void Walker</h3>
+<p class="text-sm text-on-surface-variant line-clamp-2 mb-6">Explore the space between dimensions in this atmospheric survival adventure.</p>
+<a class="text-secondary font-headline uppercase text-xs font-bold tracking-widest hover:underline decoration-2" href="#">Details_</a>
+</div>
+</div>
+<!-- Data Heist -->
+<div class="min-w-[280px] sm:min-w-[320px] bg-surface-container-low border border-outline-variant/10 group hover:border-primary/50 transition-all duration-300">
+<div class="relative h-48 overflow-hidden">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 scale-110 group-hover:scale-100" data-alt="cyberpunk hacking interface with green digital rain and glowing matrix numbers on a black screen" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDKizDSp6Gh7W3WtdM3k13I_pTNhX4kjXX-xanbefWK9soEectxmRaLWIJ6tUW7ll--VUNHx-emtOR3UK3PwVxXVmeMDbifnaPnVrHqSAR43TU21V2sWVn3kTsRczjNf9yXa6ABwU-wnMP6kolT4j6WdV6OQCw__OobMCFfayN_e7fybFxOyRcX0tc3BSMhrbCIOrh-UILCXJS7SMB01rLbslQ5DH3TDnIvLfsXs316AUIPxG_bi5wDzopEDRI5yOj4HRlrZ-vxTNM"/>
+<div class="absolute top-4 left-4 bg-primary text-on-primary px-3 py-1 font-headline text-[10px] font-bold uppercase">STRATEGY</div>
+</div>
+<div class="p-6">
+<h3 class="font-headline text-xl font-bold uppercase mb-2">Data Heist</h3>
+<p class="text-sm text-on-surface-variant line-clamp-2 mb-6">Infiltrate global networks and bypass neural firewalls in this terminal-based puzzler.</p>
+<a class="text-secondary font-headline uppercase text-xs font-bold tracking-widest hover:underline decoration-2" href="#">Details_</a>
+</div>
+</div>
+<!-- Grid Racer -->
+<div class="min-w-[280px] sm:min-w-[320px] bg-surface-container-low border border-outline-variant/10 group hover:border-primary/50 transition-all duration-300">
+<div class="relative h-48 overflow-hidden">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 scale-110 group-hover:scale-100" data-alt="retro futurist car racing through a synthwave grid landscape with vibrant pink and cyan neon lights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCpJxfgw23KoUlPMrxwEuoGe1LJzp28Kvhb52-bzOyd_1UQZTzDHe5gKXWWIzFgpUz6Ki5ko-AHCIIJ1QKEV-kbjdb74jry0warWNGfvDMWAQyOmC5jeyEGkpzHXqRXwM8UfMOXehwaMf1zH6LF80tybPQJUm8pc51SMY_SRU3zsBCdAajl1Yu5wVofgMs27y64Fxxh0My7LyzSdqmyByadFBWl7RTNM2If0ExaWIvs788BetItBIXW6mDByo4CTfudzTW5fOFSSec"/>
+<div class="absolute top-4 left-4 bg-primary text-on-primary px-3 py-1 font-headline text-[10px] font-bold uppercase">ARCADE</div>
+</div>
+<div class="p-6">
+<h3 class="font-headline text-xl font-bold uppercase mb-2">Grid Racer</h3>
+<p class="text-sm text-on-surface-variant line-clamp-2 mb-6">High-velocity drift-focused racing set in a generative synthwave universe.</p>
+<a class="text-secondary font-headline uppercase text-xs font-bold tracking-widest hover:underline decoration-2" href="#">Details_</a>
+</div>
+</div>
+<!-- Key Breaker -->
+<div class="min-w-[280px] sm:min-w-[320px] bg-surface-container-low border border-outline-variant/10 group hover:border-primary/50 transition-all duration-300">
+<div class="relative h-48 overflow-hidden">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 scale-110 group-hover:scale-100" data-alt="close up of glowing mechanical computer server lights in a dark room representing digital keys" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0pn0W1Z3LSIQGasi4eyZYYlX7Q8D9BIJwqsMby7HMH6eSUbjH6efD4Nkeo161ehEV4VDwoG3qH8Pv5ErRxF3w8MPDScY2qbfdJrGskiDFJBvLcW2r3kzAder5MqPPQmyeIHhlHs47TD_ZojA8AM8VTn_IJhVvtfCuJgAOUu0yNBebe1mxw7kdWpW2dkFjduB3UPbfu_97rfkmSwBjG7yfXYZ9zUNr3CHWafTbnH6_aQA-AsehooFbObUfsQYzibigf08QdWYxkw8"/>
+<div class="absolute top-4 left-4 bg-primary text-on-primary px-3 py-1 font-headline text-[10px] font-bold uppercase">PUZZLE</div>
+</div>
+<div class="p-6">
+<h3 class="font-headline text-xl font-bold uppercase mb-2">Key Breaker</h3>
+<p class="text-sm text-on-surface-variant line-clamp-2 mb-6">Decode encrypted messages before the clock runs out. Minimalist design.</p>
+<a class="text-secondary font-headline uppercase text-xs font-bold tracking-widest hover:underline decoration-2" href="#">Details_</a>
+</div>
+</div>
+</div>
+</section>
+<!-- 4. Media Log -->
+<section class="py-16 md:py-24 px-4 md:px-8 bg-surface-container-low relative overflow-hidden" id="media">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8">
+<!-- Reading List -->
+<div class="space-y-8 bg-surface p-8 border-t-2 border-primary">
+<div class="flex items-center gap-4 mb-4">
+<span class="material-symbols-outlined text-primary">book</span>
+<h3 class="font-headline text-xl font-bold uppercase tracking-widest">Reading List</h3>
+</div>
+<div class="space-y-6">
+<div class="group">
+<p class="font-headline text-sm font-bold uppercase text-on-surface group-hover:text-primary transition-colors">The Pragmatic Programmer</p>
+<p class="text-xs uppercase tracking-widest text-on-surface-variant mt-1">Hunt &amp; Thomas // 90% Complete</p>
+</div>
+<div class="group">
+<p class="font-headline text-sm font-bold uppercase text-on-surface group-hover:text-primary transition-colors">Ghost in the Wires</p>
+<p class="text-xs uppercase tracking-widest text-on-surface-variant mt-1">Kevin Mitnick // Reading Next</p>
+</div>
+<div class="group opacity-50">
+<p class="font-headline text-sm font-bold uppercase text-on-surface">Clean Code</p>
+<p class="text-xs uppercase tracking-widest text-on-surface-variant mt-1">Robert C. Martin // Finished</p>
+</div>
+</div>
+</div>
+<!-- Watch List -->
+<div class="space-y-8 bg-surface p-8 border-t-2 border-tertiary">
+<div class="flex items-center gap-4 mb-4">
+<span class="material-symbols-outlined text-tertiary">movie</span>
+<h3 class="font-headline text-xl font-bold uppercase tracking-widest">Watch List</h3>
+</div>
+<div class="relative aspect-video rounded-lg overflow-hidden group">
+<img class="w-full h-full object-cover" data-alt="high contrast anime style city scape silhouette with red glowing lights and dramatic smoke trails" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZYGItdFBEXdNhTKa_mbenjNkCFZgiiBAPPwj0qPUXs4iK6bXte72sD0qk8CHcu5bwMpkiaqTMC_QBLxeXzGvOZl9MCM68bf7v1QJtp63eb6VRs4iC1OyDoKJtNNDBmoDznxSmk7dss0g5GFPS1gDhpccjtPhddpoHyboGAjTYLxsBidzqJUrTEbylp2do2H1H7HprAWiOCerjKFm_es2zLEec2kVTlOZGonTZ6zL5ou-ZMQMVmmAQpbkaQGzc78XEG80SL0stkfI"/>
+<div class="absolute inset-0 bg-tertiary/20 mix-blend-multiply group-hover:bg-transparent transition-all"></div>
+<div class="absolute bottom-4 left-4">
+<p class="font-headline font-black text-2xl uppercase italic">AKIRA</p>
+<span class="text-[10px] uppercase font-bold bg-tertiary text-on-tertiary px-2">Now Watching</span>
+</div>
+</div>
+</div>
+<!-- Currently Playing -->
+<div class="space-y-8 bg-surface p-8 border-t-2 border-secondary">
+<div class="flex items-center gap-4 mb-4">
+<span class="material-symbols-outlined text-secondary">sports_esports</span>
+<h3 class="font-headline text-xl font-bold uppercase tracking-widest">Current Rotation</h3>
+</div>
+<div class="flex items-center justify-between p-4 bg-surface-container-low border border-outline-variant/20">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 bg-secondary/10 flex items-center justify-center rounded">
+<span class="material-symbols-outlined text-secondary text-sm">view_in_ar</span>
+</div>
+<span class="font-headline text-sm font-bold uppercase">Minecraft</span>
+</div>
+<span class="text-[10px] uppercase text-secondary font-bold">128H PLAYED</span>
+</div>
+<div class="flex items-center justify-between p-4 bg-surface-container-low border border-outline-variant/20">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 bg-secondary/10 flex items-center justify-center rounded">
+<span class="material-symbols-outlined text-secondary text-sm">grid_view</span>
+</div>
+<span class="font-headline text-sm font-bold uppercase">Roblox</span>
+</div>
+<span class="text-[10px] uppercase text-secondary font-bold">LUA_DEV MODE</span>
+</div>
+</div>
+</div>
+</section>
+<!-- 5. Project Spotlight: NEON_SHIFT -->
+<section class="py-16 md:py-24 px-4 md:px-8 relative" id="projects">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+<div>
+<div class="inline-block border-l-2 border-primary pl-4 mb-8">
+<h2 class="font-headline text-3xl sm:text-5xl font-black uppercase leading-tight">NEON_SHIFT <br/> ENGINE</h2>
+<p class="text-primary font-headline uppercase tracking-[0.4em] text-xs mt-2 font-bold">High-Performance Voxel Pipeline</p>
+</div>
+<div class="space-y-6 mb-12">
+<p class="text-on-surface-variant leading-relaxed">
+                                A custom-built game engine written in C++ and OpenGL, designed for rapid development of voxel-based worlds with real-time lighting and physics.
+                            </p>
+<div class="grid grid-cols-2 gap-4">
+<div class="p-4 bg-surface-container-low rounded-lg border border-outline-variant/10">
+<div class="text-xs font-headline uppercase text-on-surface-variant mb-1">Language</div>
+<div class="font-headline font-bold uppercase text-primary">C++ 20</div>
+</div>
+<div class="p-4 bg-surface-container-low rounded-lg border border-outline-variant/10">
+<div class="text-xs font-headline uppercase text-on-surface-variant mb-1">Architecture</div>
+<div class="font-headline font-bold uppercase text-primary">ECS Core</div>
+</div>
+</div>
+</div>
+<div class="space-y-4">
+<h3 class="font-headline text-sm font-black uppercase tracking-[0.2em] text-on-surface">The Roadmap_</h3>
+<div class="space-y-2">
+<div class="flex items-center gap-4 text-xs font-headline uppercase">
+<span class="material-symbols-outlined text-secondary text-sm">check_circle</span>
+<span>Voxel Batch Rendering System</span>
+</div>
+<div class="flex items-center gap-4 text-xs font-headline uppercase opacity-70">
+<span class="material-symbols-outlined text-primary text-sm">radio_button_checked</span>
+<span>Multithreaded Physics Engine (In Progress)</span>
+</div>
+<div class="flex items-center gap-4 text-xs font-headline uppercase opacity-50">
+<span class="material-symbols-outlined text-outline text-sm">radio_button_unchecked</span>
+<span>Cross-Platform Deployment (Q3 2024)</span>
+</div>
+</div>
+</div>
+</div>
+<div class="relative">
+<div class="bg-surface-container-lowest p-4 md:p-6 rounded-lg border-l-4 border-primary font-mono text-xs md:text-sm overflow-x-auto group">
+<div class="flex items-center gap-2 mb-4 border-b border-outline-variant/20 pb-4">
+<span class="w-3 h-3 rounded-full bg-error"></span>
+<span class="w-3 h-3 rounded-full bg-[#fbbc05]"></span>
+<span class="w-3 h-3 rounded-full bg-secondary"></span>
+<span class="ml-4 font-headline uppercase text-[10px] tracking-widest text-on-surface-variant">Core_Renderer.cpp</span>
+</div>
+<pre class="text-primary-dim leading-relaxed"><span class="text-tertiary">#include</span> "NeonShift/Renderer.h"
+
+<span class="text-on-surface-variant">// Initialize Voxel Buffer</span>
+void Engine::Init() {
+    auto&amp; pipeline = GetPipeline();
+    pipeline.AttachShader(<span class="text-secondary">"v_vox.glsl"</span>);
+    
+    <span class="text-on-surface-variant">// Hard Shadow Mapping Logic</span>
+    pipeline.EnableDepthTest(true);
+    pipeline.SetClearColor(0.04f, 0.04f, 0.04f);
+    
+    LOG_INFO(<span class="text-secondary">"NEON_SHIFT ENGINE ACTIVE"</span>);
+}
+                            </pre>
+<div class="mt-6 flex justify-between items-center">
+<span class="text-[10px] uppercase font-headline tracking-widest text-on-surface-variant">Line 142 / 12,402</span>
+<button class="text-secondary hover:text-secondary-dim transition-colors">
+<span class="material-symbols-outlined">content_copy</span>
+</button>
+</div>
+</div>
+<div class="absolute -bottom-10 -right-10 w-48 h-48 bg-primary/20 blur-3xl rounded-full -z-10"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- 6. Join the Dev_Log (Email Signup) -->
+<section class="py-16 md:py-24 px-4 md:px-8 border-t border-outline-variant/20">
+<div class="max-w-4xl mx-auto text-center space-y-12">
+<div>
+<h2 class="font-headline text-4xl md:text-6xl font-black uppercase tracking-tight mb-4">Join the Dev_Log</h2>
+<p class="text-on-surface-variant font-headline uppercase tracking-[0.2em] text-sm">Weekly updates on builds, benchmarks, and byte-sized insights.</p>
+</div>
+<form class="flex flex-col md:flex-row gap-4 max-w-2xl mx-auto">
+<input class="flex-grow bg-surface-container-lowest border-outline-variant border focus:ring-2 focus:ring-secondary focus:border-secondary text-on-surface font-headline uppercase tracking-widest text-sm p-5 outline-none transition-all" placeholder="ENTER_EMAIL_ADDRESS" type="email"/>
+<button class="bg-primary text-on-primary px-10 py-5 font-headline font-black uppercase tracking-widest hover:bg-primary-container hover:scale-105 active:scale-95 transition-all shadow-[6px_6px_0px_#000000]" type="submit">
+                        Subscribe_
+                    </button>
+</form>
+<div class="pt-8 flex justify-center gap-12">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">groups</span>
+<span class="font-headline text-xs font-bold uppercase tracking-widest">2.4k Devs</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">terminal</span>
+<span class="font-headline text-xs font-bold uppercase tracking-widest">Weekly Code</span>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 px-4 md:px-8 border-t border-[#484847]/20 bg-[#0e0e0e] flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex flex-col items-center md:items-start gap-2">
+<div class="text-lg font-bold text-[#2ff801] font-headline">CHARLES_DEV</div>
+<p class="font-['Space_Grotesk'] text-xs tracking-[0.2em] uppercase text-gray-500">© 2024 CHARLES_DEV // KINETIC_DEV FRAMEWORK</p>
+</div>
+<div class="flex gap-8">
+<a class="font-['Space_Grotesk'] text-xs tracking-[0.2em] uppercase text-gray-500 hover:text-[#ff6b98] hover:tracking-[0.3em] transition-all duration-300" href="#">GitHub</a>
+<a class="font-['Space_Grotesk'] text-xs tracking-[0.2em] uppercase text-gray-500 hover:text-[#ff6b98] hover:tracking-[0.3em] transition-all duration-300" href="#">Discord</a>
+<a class="font-['Space_Grotesk'] text-xs tracking-[0.2em] uppercase text-gray-500 hover:text-[#ff6b98] hover:tracking-[0.3em] transition-all duration-300" href="#">Itch.io</a>
+<a class="font-['Space_Grotesk'] text-xs tracking-[0.2em] uppercase text-gray-500 hover:text-[#ff6b98] hover:tracking-[0.3em] transition-all duration-300" href="#">Twitter</a>
+</div>
+<div class="flex items-center gap-2">
+<div class="w-2 h-2 bg-secondary rounded-full"></div>
+<span class="font-headline text-[10px] uppercase tracking-widest text-secondary font-bold">SYSTEM_ONLINE</span>
+</div>
+</footer>
+</body></html>
