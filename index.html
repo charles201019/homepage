@@ -160,36 +160,148 @@
 </div>
 </section>
 <!-- 2. Featured Release: MOUSE -->
-<section class="py-16 md:py-24 px-4 md:px-8 bg-surface-container-low">
+<section class="py-16 md:py-24 px-4 md:px-8 bg-surface-container-low" id="mouse">
 <div class="max-w-7xl mx-auto">
-<div class="flex flex-col md:flex-row gap-8 md:gap-12 items-center">
-<div class="w-full md:w-1/2 relative">
-<div class="absolute -top-10 -left-10 text-[10rem] font-black text-white/5 font-headline pointer-events-none uppercase">MOUSE</div>
+<!-- Section Header -->
+<div class="mb-12">
+<div class="inline-flex items-center gap-3 bg-secondary-container px-4 py-1.5 rounded-full border border-secondary/20 mb-6">
+<span class="w-2.5 h-2.5 bg-secondary rounded-full animate-pulse"></span>
+<span class="font-headline text-xs tracking-widest uppercase font-bold text-on-secondary-container">Live & Playable</span>
+</div>
+<h2 class="font-headline text-4xl sm:text-6xl font-black uppercase tracking-tighter">Featured Release_</h2>
+</div>
+<div class="flex flex-col lg:flex-row gap-8 md:gap-12 items-start">
+<!-- Live Game Embed -->
+<div class="w-full lg:w-3/5 relative">
+<div class="absolute -top-10 -left-10 text-[10rem] font-black text-white/[0.03] font-headline pointer-events-none uppercase select-none">MOUSE</div>
 <div class="relative rounded-lg overflow-hidden border-2 border-primary/30 group">
-<img class="w-full aspect-video object-cover" data-alt="dark high contrast top-down game screenshot of a mechanical mouse navigating a neon glowing laboratory maze cinematic shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXOMoQ-0GRm3pqgBXhGj7_6sVG6oKGCF8X4zpOfLBlprNQ-OaxyxhhiiYx4ck4Wf-PD3rfxEeyfnuukRFT5d2o9I-4VruDubT1B_7JoQdBr5iGezsY3gTxxZzQETdzQZ6MAY6uKur1ib2_9PMvHOOq0rt8qbD06Z-7Qh-GPe3UCH2xwNGAXEHBxt_SawIlFPwlQF-hxK4jAc-91US_TuuFUJ8VIq_QlCp_RJdtRLdB9nWyXM8BzE3vStINcLWkgNFe9S9wIrLMtp4"/>
-<div class="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent opacity-60"></div>
+<div class="relative" style="padding-top: 62.5%;">
+<iframe src="https://mouse.charlesdesign.xyz" class="absolute inset-0 w-full h-full border-0" title="MOUSE Game" loading="lazy" allow="autoplay"></iframe>
+</div>
+<div class="absolute top-4 left-4 z-10 bg-[#1a1c2c]/90 backdrop-blur-sm px-3 py-1.5 border border-[#f4b41a]/30 rounded">
+<span class="font-headline text-[10px] tracking-widest uppercase font-bold text-[#f4b41a]">Live Preview</span>
 </div>
 </div>
-<div class="w-full md:w-1/2 space-y-6">
-<div class="font-headline text-tertiary uppercase tracking-[0.3em] text-sm font-bold">Featured Release</div>
-<h2 class="font-headline text-3xl sm:text-5xl font-black uppercase tracking-tighter">MOUSE_</h2>
-<p class="text-on-surface-variant text-lg">
-                            A high-stakes tactical survival game where you play as an enhanced laboratory mouse escaping a collapsing research facility. Features physics-based platforming and advanced AI sentries.
-                        </p>
-<div class="flex items-center gap-6 py-4">
+<a href="https://mouse.charlesdesign.xyz" target="_blank" class="mt-4 w-full bg-secondary text-on-secondary px-10 py-5 font-headline font-black uppercase tracking-widest text-lg flex items-center justify-center gap-3 hover:bg-secondary-dim transition-colors no-underline">
+PLAY FULLSCREEN <span class="material-symbols-outlined">open_in_new</span>
+</a>
+</div>
+<!-- Game Details & Dev Progress -->
+<div class="w-full lg:w-2/5 space-y-8">
+<!-- Title & Description -->
+<div>
+<h3 class="font-headline text-3xl sm:text-5xl font-black uppercase tracking-tighter mb-4">MOUSE_</h3>
+<p class="text-on-surface-variant leading-relaxed">
+A Snake-inspired browser game where you control a pixel-art mouse collecting cheese. Features wrap-around movement, dynamic obstacle spawning with BFS pathfinding, procedural chiptune music, and a full particle system — all in a single zero-dependency HTML file.
+</p>
+</div>
+<!-- Tech Stack Chips -->
+<div class="flex flex-wrap items-center gap-3">
+<div class="inline-flex items-center gap-2 bg-surface-container-highest px-3 py-1.5 rounded-full border border-outline-variant/20">
+<span class="font-label text-[10px] uppercase tracking-widest text-primary">HTML5 Canvas</span>
+</div>
+<div class="inline-flex items-center gap-2 bg-surface-container-highest px-3 py-1.5 rounded-full border border-outline-variant/20">
+<span class="font-label text-[10px] uppercase tracking-widest text-primary">Web Audio API</span>
+</div>
+<div class="inline-flex items-center gap-2 bg-surface-container-highest px-3 py-1.5 rounded-full border border-outline-variant/20">
+<span class="font-label text-[10px] uppercase tracking-widest text-primary">Vanilla JS</span>
+</div>
+<div class="inline-flex items-center gap-2 bg-surface-container-highest px-3 py-1.5 rounded-full border border-outline-variant/20">
+<span class="font-label text-[10px] uppercase tracking-widest text-[#f4b41a]">Zero Deps</span>
+</div>
+</div>
+<!-- Stats Bar -->
+<div class="flex items-center gap-6 py-4 border-t border-b border-outline-variant/20">
 <div class="text-center">
-<div class="text-2xl font-headline font-bold text-primary">4.9/5</div>
-<div class="text-[10px] uppercase tracking-widest opacity-50">Rating</div>
+<div class="text-2xl font-headline font-bold text-primary">1</div>
+<div class="text-[10px] uppercase tracking-widest opacity-50">File</div>
 </div>
 <div class="w-px h-10 bg-outline-variant/30"></div>
 <div class="text-center">
-<div class="text-2xl font-headline font-bold text-primary">12K+</div>
-<div class="text-[10px] uppercase tracking-widest opacity-50">Players</div>
+<div class="text-2xl font-headline font-bold text-primary">1.2K</div>
+<div class="text-[10px] uppercase tracking-widest opacity-50">Lines</div>
+</div>
+<div class="w-px h-10 bg-outline-variant/30"></div>
+<div class="text-center">
+<div class="text-2xl font-headline font-bold text-primary">12</div>
+<div class="text-[10px] uppercase tracking-widest opacity-50">Systems</div>
+</div>
+<div class="w-px h-10 bg-outline-variant/30"></div>
+<div class="text-center">
+<div class="text-2xl font-headline font-bold text-secondary">LIVE</div>
+<div class="text-[10px] uppercase tracking-widest opacity-50">Status</div>
 </div>
 </div>
-<button class="w-full md:w-auto bg-secondary text-on-secondary px-10 py-5 font-headline font-black uppercase tracking-widest text-lg flex items-center justify-center gap-3 hover:bg-secondary-dim transition-colors">
-                            PLAY NOW <span class="material-symbols-outlined">play_arrow</span>
-</button>
+<!-- Dev Progress -->
+<div class="bg-surface p-6 border-l-4 border-primary space-y-4">
+<h4 class="font-headline text-sm font-black uppercase tracking-[0.2em] text-on-surface">Dev_Progress</h4>
+<div class="space-y-3">
+<div class="flex items-center gap-3 text-xs font-headline uppercase">
+<span class="material-symbols-outlined text-secondary text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span>Core game loop & movement</span>
+</div>
+<div class="flex items-center gap-3 text-xs font-headline uppercase">
+<span class="material-symbols-outlined text-secondary text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span>Pixel-art sprite system</span>
+</div>
+<div class="flex items-center gap-3 text-xs font-headline uppercase">
+<span class="material-symbols-outlined text-secondary text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span>BFS obstacle pathfinding</span>
+</div>
+<div class="flex items-center gap-3 text-xs font-headline uppercase">
+<span class="material-symbols-outlined text-secondary text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span>Chiptune audio engine</span>
+</div>
+<div class="flex items-center gap-3 text-xs font-headline uppercase">
+<span class="material-symbols-outlined text-secondary text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span>Particle effects system</span>
+</div>
+<div class="flex items-center gap-3 text-xs font-headline uppercase">
+<span class="material-symbols-outlined text-secondary text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span>Mobile touch & D-pad controls</span>
+</div>
+<div class="flex items-center gap-3 text-xs font-headline uppercase">
+<span class="material-symbols-outlined text-secondary text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span>Responsive grid scaling</span>
+</div>
+<div class="flex items-center gap-3 text-xs font-headline uppercase">
+<span class="material-symbols-outlined text-secondary text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span>Deployed via Cloudflare Tunnel</span>
+</div>
+</div>
+<div class="mt-4 pt-4 border-t border-outline-variant/20">
+<div class="flex justify-between items-center">
+<span class="text-[10px] uppercase tracking-widest text-on-surface-variant font-headline">Completion</span>
+<span class="text-[10px] uppercase tracking-widest text-secondary font-headline font-bold">100%</span>
+</div>
+<div class="w-full bg-surface-container-highest h-2 mt-2 rounded-full overflow-hidden">
+<div class="h-full bg-gradient-to-r from-primary to-secondary rounded-full" style="width: 100%"></div>
+</div>
+</div>
+</div>
+<!-- Game Features -->
+<div class="grid grid-cols-2 gap-3">
+<div class="p-3 bg-surface-container-highest rounded border border-outline-variant/10">
+<span class="material-symbols-outlined text-[#f4b41a] text-lg mb-1">speed</span>
+<div class="text-[10px] font-headline uppercase tracking-widest text-on-surface-variant">Progressive Speed</div>
+<div class="text-xs font-headline font-bold text-on-surface mt-1">150ms → 60ms tick</div>
+</div>
+<div class="p-3 bg-surface-container-highest rounded border border-outline-variant/10">
+<span class="material-symbols-outlined text-[#5d275d] text-lg mb-1">widgets</span>
+<div class="text-[10px] font-headline uppercase tracking-widest text-on-surface-variant">Dynamic Obstacles</div>
+<div class="text-xs font-headline font-bold text-on-surface mt-1">BFS-safe spawning</div>
+</div>
+<div class="p-3 bg-surface-container-highest rounded border border-outline-variant/10">
+<span class="material-symbols-outlined text-tertiary text-lg mb-1">music_note</span>
+<div class="text-[10px] font-headline uppercase tracking-widest text-on-surface-variant">Chiptune Audio</div>
+<div class="text-xs font-headline font-bold text-on-surface mt-1">Procedural SFX + BGM</div>
+</div>
+<div class="p-3 bg-surface-container-highest rounded border border-outline-variant/10">
+<span class="material-symbols-outlined text-primary text-lg mb-1">devices</span>
+<div class="text-[10px] font-headline uppercase tracking-widest text-on-surface-variant">Cross-Platform</div>
+<div class="text-xs font-headline font-bold text-on-surface mt-1">Desktop + Mobile</div>
+</div>
+</div>
 </div>
 </div>
 </div>
